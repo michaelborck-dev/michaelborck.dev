@@ -1,0 +1,20 @@
+/* Research page specific styles */
+:root {
+    --research-accent: #28a745;
+}
+
+.hero h1 {
+    background: linear-gradient(135deg, var(--text-primary) 0%, var(--research-accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.section-title::after {
+    background: var(--research-accent);
+}
+
+/* Override default accent color for research page */
+:root {
+    --accent: var(--research-accent);
+}

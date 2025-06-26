@@ -1,0 +1,156 @@
+/* Consultancy page specific styles */
+:root {
+    --business-accent: #6C63FF;
+    --education-accent: #00D9FF;
+}
+
+.hero::before {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, var(--business-accent) 0%, transparent 70%);
+    opacity: 0.1;
+    top: -250px;
+    right: -250px;
+    animation: pulse 4s ease-in-out infinite;
+}
+
+.hero::after {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, var(--education-accent) 0%, transparent 70%);
+    opacity: 0.1;
+    bottom: -200px;
+    left: -200px;
+    animation: pulse 4s ease-in-out infinite reverse;
+}
+
+.hero h1 {
+    background: linear-gradient(135deg, var(--business-accent) 0%, var(--education-accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    transition: height 0.3s ease;
+}
+
+.service-card.business::before {
+    background: linear-gradient(90deg, var(--business-accent) 0%, #8b84ff 100%);
+}
+
+.service-card.education::before {
+    background: linear-gradient(90deg, var(--education-accent) 0%, #00b3cc 100%);
+}
+
+.service-card:hover::before {
+    height: 8px;
+}
+
+.service-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    animation: float-icon 3s ease-in-out infinite;
+}
+
+.service-card.business .service-icon {
+    animation-delay: 0s;
+}
+
+.service-card.education .service-icon {
+    animation-delay: 1.5s;
+}
+
+.service-card.business .service-title {
+    color: var(--business-accent);
+}
+
+.service-card.education .service-title {
+    color: var(--education-accent);
+}
+
+.service-card.business .service-features li::before {
+    color: var(--business-accent);
+}
+
+.service-card.education .service-features li::before {
+    color: var(--education-accent);
+}
+
+.service-cta {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card.business .service-cta {
+    background: var(--business-accent);
+    color: white;
+}
+
+.service-card.education .service-cta {
+    background: var(--education-accent);
+    color: white;
+}
+
+.service-cta:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.section-title::after {
+    background: linear-gradient(90deg, var(--business-accent) 0%, var(--education-accent) 100%);
+    width: 80px;
+}
+
+.step-number {
+    background: linear-gradient(135deg, var(--business-accent) 0%, var(--education-accent) 100%);
+}
+
+.contact-cta {
+    padding: 5rem 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(108, 99, 255, 0.1) 0%, rgba(0, 217, 255, 0.1) 100%);
+}
+
+.cta-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cta-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, var(--business-accent) 0%, var(--education-accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.cta-text {
+    font-size: 1.3rem;
+    color: var(--text-secondary);
+    margin-bottom: 2.5rem;
+}
+
+.cta-button {
+    background: linear-gradient(135deg, var(--business-accent) 0%, var(--education-accent) 100%);
+    box-shadow: 0 5px 20px rgba(108, 99, 255, 0.3);
+    padding: 1.2rem 3rem;
+}
+
+.cta-button:hover {
+    box-shadow: 0 8px 30px rgba(108, 99, 255, 0.4);
+}

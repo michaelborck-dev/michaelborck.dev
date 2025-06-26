@@ -1,0 +1,30 @@
+/* Resume page specific styles */
+:root {
+    --game-accent: #FF6B6B;
+    --magazine-accent: #4ECDC4;
+    --blog-accent: #FFE66D;
+    --traditional-accent: #95E1D3;
+}
+
+.hero::before,
+.hero::after {
+    opacity: 0.05;
+}
+
+.hero::before {
+    width: 300px;
+    height: 300px;
+    background: var(--game-accent);
+    top: 10%;
+    left: 10%;
+    animation: float 8s ease-in-out infinite;
+}
+
+.hero::after {
+    width: 250px;
+    height: 250px;
+    background: var(--magazine-accent);
+    bottom: 10%;
+    right: 10%;
+    animation: float 8s ease-in-out infinite reverse;
+}
