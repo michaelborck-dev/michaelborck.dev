@@ -28,3 +28,157 @@
     right: 10%;
     animation: float 8s ease-in-out infinite reverse;
 }
+
+/* Resume Formats Section */
+.formats-section {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-intro {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-intro h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.section-intro p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+}
+
+.formats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.format-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    position: relative;
+}
+
+.format-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.format-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    transition: height 0.3s ease;
+}
+
+.format-card:hover::before {
+    height: 100%;
+    opacity: 0.05;
+}
+
+/* Individual card accents */
+.format-card.game::before { background: var(--game-accent); }
+.format-card.magazine::before { background: var(--magazine-accent); }
+.format-card.blog::before { background: var(--blog-accent); }
+.format-card.traditional::before { background: var(--traditional-accent); }
+
+.format-icon {
+    padding: 3rem 2rem 2rem;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.format-content {
+    padding: 0 2rem 2rem;
+    text-align: center;
+}
+
+.format-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.format-description {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.format-link {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: var(--accent);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.format-link:hover {
+    background: var(--hover-accent);
+    transform: translateY(-2px);
+}
+
+/* Card-specific link colors */
+.format-card.game .format-link { background: var(--game-accent); }
+.format-card.magazine .format-link { background: var(--magazine-accent); }
+.format-card.blog .format-link { background: var(--blog-accent); }
+.format-card.traditional .format-link { background: var(--traditional-accent); }
+
+.format-card.game .format-link:hover { background: #ff5252; }
+.format-card.magazine .format-link:hover { background: #26c6da; }
+.format-card.blog .format-link:hover { background: #ffca28; }
+.format-card.traditional .format-link:hover { background: #4db6ac; }
+
+/* CTA Section */
+.cta-section {
+    background: var(--card-bg);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.cta-text {
+    font-size: 1.3rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: var(--accent);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+.download-btn:hover {
+    background: var(--hover-accent);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .formats-grid {
+        grid-template-columns: 1fr;
+    }
+}

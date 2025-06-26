@@ -1,6 +1,7 @@
 /* Research page specific styles */
 :root {
     --research-accent: #28a745;
+    --accent: var(--research-accent);
 }
 
 .hero h1 {
@@ -14,7 +15,170 @@
     background: var(--research-accent);
 }
 
-/* Override default accent color for research page */
-:root {
-    --accent: var(--research-accent);
+/* Research Sections */
+.section {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Projects Grid - extends common card styles */
+.projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.project-status {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    background: rgba(40, 167, 69, 0.1);
+    color: var(--research-accent);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* Presentations */
+.presentations-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.presentation-item {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    background: var(--card-bg);
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.presentation-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+}
+
+.presentation-date {
+    text-align: center;
+    min-width: 80px;
+}
+
+.presentation-month {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--research-accent);
+}
+
+.presentation-year {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.presentation-details {
+    flex: 1;
+}
+
+.presentation-details h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.presentation-venue {
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.presentation-slides {
+    color: var(--research-accent);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.presentation-slides:hover {
+    color: #1e7e34;
+}
+
+/* Publications */
+.publications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.publication-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.publication-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.publication-title {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+    line-height: 1.4;
+}
+
+.publication-authors {
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.publication-venue {
+    color: var(--text-secondary);
+    font-style: italic;
+    margin-bottom: 1.5rem;
+}
+
+.publication-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.publication-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(40, 167, 69, 0.1);
+    color: var(--research-accent);
+    text-decoration: none;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.publication-link:hover {
+    background: var(--research-accent);
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .projects-grid,
+    .publications-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .presentation-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .presentation-date {
+        min-width: auto;
+    }
 }
