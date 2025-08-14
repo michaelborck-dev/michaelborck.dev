@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting to Resume Portal...</title>
+    <meta http-equiv="refresh" content="0; url=https://resume.michaelborck.dev">
+    <link rel="canonical" href="https://resume.michaelborck.dev">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .redirect-message {
+            text-align: center;
+            padding: 2rem;
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        a {
+            color: white;
+            text-decoration: underline;
+        }
+        .loader {
+            border: 3px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            border-top: 3px solid white;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 2rem;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="redirect-message">
+        <div class="loader"></div>
+        <h1>Redirecting to Resume Portal</h1>
+        <p>You're being redirected to the new interactive resume experience...</p>
+        <p>If you're not redirected automatically, <a href="https://resume.michaelborck.dev">click here</a></p>
+    </div>
+    <script>
+        // Fallback redirect
+        setTimeout(function() {
+            window.location.href = 'https://resume.michaelborck.dev';
+        }, 100);
+    </script>
+</body>
+</html>
